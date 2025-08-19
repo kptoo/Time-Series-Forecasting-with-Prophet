@@ -4,12 +4,12 @@ import os
 from prophet import Prophet
 
 # Specifying File Paths, this is my path, you will need to replace with yours
-th_file = 'C:\\Users\\ANDUVATE\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\load_files_wMay\\th.csv'
-th_temp_file = 'C:\\Users\\ANDUVATE\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\temperature_files_wMay\\th_temp_w_may.csv'
-rp_file = 'C:\\Users\\ANDUVATE\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\load_files_wMay\\rp.csv'
-rp_temp_file = 'C:\\Users\\ANDUVATE\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\temperature_files_wMay\\rp_temp_w_may.csv'
-lsc_file = 'C:\\Users\\ANDUVATE\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\load_files_wMay\\lsc.csv'
-lsc_temp_file = 'C:\\Users\\ANDUVATE\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\temperature_files_wMay\\lsc_temp_w_may.csv'
+th_file = 'C:\\Users\\kiptoo\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\load_files_wMay\\th.csv'
+th_temp_file = 'C:\\Users\\kiptoo\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\temperature_files_wMay\\th_temp_w_may.csv'
+rp_file = 'C:\\Users\\kiptoo\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\load_files_wMay\\rp.csv'
+rp_temp_file = 'C:\\Users\\kiptoo\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\temperature_files_wMay\\rp_temp_w_may.csv'
+lsc_file = 'C:\\Users\\kiptoo\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\load_files_wMay\\lsc.csv'
+lsc_temp_file = 'C:\\Users\\kiptoo\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\temperature_files_wMay\\lsc_temp_w_may.csv'
 
 # Loading data into DataFrames
 th_data = pd.read_csv(th_file)
@@ -114,7 +114,7 @@ for dataset_name, forecast in forecasts.items():
     print(forecast[['ds', 'yhat']].tail())  # Display the last few rows of the forecast
 
 # Save the forecasts to CSV files
-output_folder = 'C:\\Users\\ANDUVATE\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\load_files_wMay'
+output_folder = 'C:\\Users\\kiptoo\\Desktop\\Upwork_Projects\\Clients Data\\Travis\\load_files_wMay'
 
 for dataset_name, forecast in forecasts.items():
     # Extract the dataset information
@@ -136,3 +136,4 @@ for dataset_name, forecast in forecasts.items():
     forecast_values.to_csv(os.path.join(output_folder, filename), index=False)
 
     print(f'Forecast for {dataset_name} saved to {filename}')
+
